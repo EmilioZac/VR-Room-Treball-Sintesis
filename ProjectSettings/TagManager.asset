@@ -4,7 +4,9 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - Cube
+  - CubeRed
+  - Mine
+  - CubeBlue
   layers:
   - Default
   - TransparentFX

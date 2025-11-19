@@ -2,8 +2,9 @@ using UnityEngine;
 
 public class SimpleSpawner : MonoBehaviour
 {
-    public GameObject prefab1;  // tu primer prefab
-    public GameObject prefab2;  // tu segundo prefab
+    public GameObject prefab1;  // primer prefab
+    public GameObject prefab2;  // segundo prefab
+    public GameObject prefab3;  // tercer prefab
 
     public float spawnTime = 1.5f;   // cada cuánto tiempo spawnea
     private float timer = 0f;
@@ -23,13 +24,24 @@ public class SimpleSpawner : MonoBehaviour
 
     void Spawn()
     {
-        // decidir si spawnea uno o dos
-        int count = Random.Range(1, 3); // 1 o 2
+        // decidir si spawnea 1, 2 o 3
+        int count = Random.Range(1, 4); // 1, 2 o 3
 
         for (int i = 0; i < count; i++)
         {
             Vector3 pos = GetRandomPosition();
-            GameObject selected = (Random.value > 0.5f) ? prefab1 : prefab2;
+
+            // elegir uno de los 3 prefabs
+            int choice = Random.Range(1, 4); // 1, 2 o 3
+
+            GameObject selected;
+
+            if (choice == 1)
+                selected = prefab1;
+            else if (choice == 2)
+                selected = prefab2;
+            else
+                selected = prefab3;
 
             Instantiate(selected, pos, Quaternion.identity);
         }
