@@ -9,6 +9,10 @@ public class SaberRed : MonoBehaviour
         {
             Destroy(other.gameObject);
         }
+        if (other.CompareTag("Mine"))
+        {
+            Time.timeScale = 0f;
+        }
     }
 }
 

@@ -9,4 +9,9 @@ public class MoveForward : MonoBehaviour
     {
         transform.Translate(Vector3.back * speed * Time.deltaTime, Space.Self);
     }
+    void Start()
+    {
+        speed = LevelManager.currentSpeed;
+    }
+
 }
