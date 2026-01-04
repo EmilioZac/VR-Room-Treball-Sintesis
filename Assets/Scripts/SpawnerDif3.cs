@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class SimpleSpawner : MonoBehaviour
+public class SpawnerDif3 : MonoBehaviour
 {
     public GameObject prefab1;  // primer prefab
     public GameObject prefab2;  // segundo prefab

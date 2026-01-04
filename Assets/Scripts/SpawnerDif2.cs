@@ -1,11 +1,11 @@
 using UnityEngine;
 
-public class SpawnerDif1 : MonoBehaviour
+public class SpawnerDif2 : MonoBehaviour
 {
     public GameObject prefab1;  // primer prefab
     public GameObject prefab2;  // segundo prefab
 
-    public float spawnTime = 3f;   // cada cuánto tiempo spawnea
+    public float spawnTime = 2f;   // cada cuánto tiempo spawnea
     private float timer = 0f;
 
     public BoxCollider spawnArea;    // el Box Collider donde aparecerán

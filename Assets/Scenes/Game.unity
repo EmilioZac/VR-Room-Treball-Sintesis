@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 1207c224ed0f7064785e408755ff6ac8, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: f531e09e2ad2fb440b4eed7605863143, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -1151,6 +1151,50 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
+--- !u!1 &424115985
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 424115987}
+  - component: {fileID: 424115986}
+  m_Layer: 0
+  m_Name: LevelManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &424115986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 424115985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5adb2bf52731d1843a994d4eaecf9ea0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+--- !u!4 &424115987
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 424115985}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.03944, y: 0, z: 9.30661}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &513953897
 GameObject:
   m_ObjectHideFlags: 0
@@ -2136,6 +2180,8 @@ GameObject:
   - component: {fileID: 814734794}
   - component: {fileID: 814734793}
   - component: {fileID: 814734795}
+  - component: {fileID: 814734797}
+  - component: {fileID: 814734796}
   m_Layer: 0
   m_Name: Spawn
   m_TagString: Untagged
@@ -2173,7 +2219,7 @@ Transform:
   m_GameObject: {fileID: 814734792}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.053, y: 1.21, z: 19.05542}
+  m_LocalPosition: {x: -0.053, y: 1.21, z: 8.51}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2186,7 +2232,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 814734792}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: febb67243b0debb4793cbfba4137ca2d, type: 3}
   m_Name: 
@@ -2195,6 +2241,38 @@ MonoBehaviour:
   prefab2: {fileID: 6607211923214059174, guid: 336be1081630a20448abc0dc1bc320a6, type: 3}
   prefab3: {fileID: 84790220768795987, guid: c20bf6db077620c498485c956fd9283a, type: 3}
   spawnTime: 1.5
+  spawnArea: {fileID: 814734793}
+--- !u!114 &814734796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 814734792}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39b4e67568aceeb42b7bfa2d628cde65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  prefab1: {fileID: 84790220768795987, guid: c20bf6db077620c498485c956fd9283a, type: 3}
+  prefab2: {fileID: 243411928101370036, guid: bb7b882687a40164bb90e774b8e93c2c, type: 3}
+  spawnTime: 2
+  spawnArea: {fileID: 814734793}
+--- !u!114 &814734797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 814734792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9156dfadc3f0bbc45b8727851cfde3c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  prefab1: {fileID: 84790220768795987, guid: c20bf6db077620c498485c956fd9283a, type: 3}
+  prefab2: {fileID: 243411928101370036, guid: bb7b882687a40164bb90e774b8e93c2c, type: 3}
+  spawnTime: 3
   spawnArea: {fileID: 814734793}
 --- !u!1 &857878157
 GameObject:
@@ -4073,3 +4151,4 @@ SceneRoots:
   - {fileID: 513953899}
   - {fileID: 857878160}
   - {fileID: 599473074}
+  - {fileID: 424115987}
