@@ -7,11 +7,13 @@ public class SaberRed : MonoBehaviour
         // Si el objeto que entra tiene tag "Cube"
         if (other.CompareTag("CubeRed"))
         {
+            GameManager.Puntuacion ++;
             Destroy(other.gameObject);
         }
         if (other.CompareTag("Mine"))
         {
-            Time.timeScale = 0f;
+            GameManager.Puntuacion --;
+            Destroy(other.gameObject);
         }
     }
 }

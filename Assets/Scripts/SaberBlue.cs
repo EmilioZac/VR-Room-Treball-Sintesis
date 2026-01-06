@@ -8,11 +8,13 @@ public class SaberBlue : MonoBehaviour
         
         if (other.CompareTag("CubeBlue"))
         {
+            GameManager.Puntuacion ++;
             Destroy(other.gameObject);
         }
         if (other.CompareTag("Mine"))
         {
-            Time.timeScale = 0f;
+            GameManager.Puntuacion --;
+            Destroy(other.gameObject);
         }
     }
 }
