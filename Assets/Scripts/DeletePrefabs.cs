@@ -8,6 +8,7 @@ public class DeletePrefabs : MonoBehaviour
         if (other.CompareTag("CubeRed"))
         {
             Destroy(other.gameObject);
+            //hola
         }
         if (other.CompareTag("CubeBlue"))
         {
